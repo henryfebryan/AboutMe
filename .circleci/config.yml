@@ -9,7 +9,9 @@ jobs:
         
     steps:
       - checkout
-      - run:
+      - name: Change wrapper permissions
+        run:
           command: chmod +x ./gradlew
-      - run:
+      - name: Build with Gradle
+        run:
           command: ./gradlew build
